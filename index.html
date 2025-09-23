@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonas Fan</title>
+    <title>范子昊 - 個人作品集</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
         /* Apple 網站風格的色彩和字體 */
@@ -17,21 +17,19 @@
 
         body {
             font-family: var(--apple-font);
-            background-color: #fff; /* 背景色改為白色，更像 Apple 官網 */
+            background-color: #fff;
             color: var(--apple-black);
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* 防止水平滾動 */
+            overflow-x: hidden;
         }
 
-        /* 全域容器，模擬網站的內容區塊 */
         .section {
             padding: 80px 0;
             text-align: center;
         }
         
-        /* 頁面標題，大而醒目 */
         .section-hero {
             padding: 150px 0;
             background-color: #fff;
@@ -50,7 +48,6 @@
             margin: 15px 0 0;
         }
 
-        /* 內容區塊的標題 */
         .section-content h2 {
             font-size: 40px;
             font-weight: 600;
@@ -58,16 +55,14 @@
             letter-spacing: -0.5px;
         }
 
-        /* 內容區塊的段落和列表 */
         .section-content p, .section-content li, .section-content ul {
             font-size: 20px;
             line-height: 1.5;
             color: var(--apple-gray);
             margin: 0 auto;
-            max-width: 600px; /* 限制內容寬度，增加留白 */
+            max-width: 600px;
         }
 
-        /* 技能列表，像 Apple 的規格圖示 */
         .skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -93,7 +88,6 @@
             border-color: var(--apple-gray);
         }
 
-        /* 興趣列表 */
         .interests-list {
             list-style: none;
             padding: 0;
@@ -107,7 +101,6 @@
             margin-bottom: 10px;
         }
 
-        /* 聯絡資訊 */
         .contact-info {
             list-style: none;
             padding: 0;
@@ -130,7 +123,6 @@
             text-decoration: underline;
         }
 
-        /* footer */
         footer {
             padding: 40px 0;
             text-align: center;
@@ -139,7 +131,6 @@
             border-top: 1px solid #d2d2d7;
         }
 
-        /* 圖片佔位符 */
         .profile-image {
             width: 200px;
             height: 200px;
@@ -147,12 +138,60 @@
             background-color: #e8e8ed;
             margin: 0 auto 30px;
             display: block;
-            /* 這裡可以放你的頭像，例如：
-            background-image: url('your-profile-photo.jpg');
+            /* 這裡可放你的頭像，例如：background-image: url('your-profile-photo.jpg'); */
             background-size: cover;
             background-position: center;
-            */
         }
+
+        /* 新增：作品集區塊的樣式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 40px auto 0;
+        }
+
+        .project-card {
+            text-align: left;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: var(--apple-bg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #d2d2d7; /* 預設圖片佔位符 */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--apple-black);
+            margin: 0 0 10px;
+        }
+
+        .project-content p {
+            font-size: 16px;
+            color: var(--apple-gray);
+            margin: 0;
+        }
+        
     </style>
 </head>
 <body>
@@ -162,12 +201,15 @@
     <div class="section section-hero">
         <div class="profile-image"></div>
         <h1>范子昊 <span style="color: var(--apple-gray);">(Jonas)</span></h1>
-        <p>師大科技系學生。一位熱愛創作與實踐的學習者。</p>
+        <p>一位擅長將程式與創意結合的跨域學習者。</p>
+        <p style="font-size: 18px; max-width: 500px; margin-top: 30px; color: var(--apple-black);">
+            我是台灣師範大學科技系的學生，對軟體開發與創新應用充滿熱情。我致力於透過程式設計解決實際問題，並樂於在不同的領域中探索新的可能性。
+        </p>
     </div>
 
     <div class="section section-content">
         <h2>專業與技能</h2>
-        <p>專長領域：程式設計、扯鈴表演。</p>
+        <p>我的專長在於將程式邏輯應用於實際問題，並結合視覺設計與表演藝術，創造出獨特的成果。</p>
         <ul class="skills-list">
             <li>Python</li>
             <li>C++</li>
@@ -177,6 +219,34 @@
     </div>
 
     <div class="section section-content" style="background-color: var(--apple-bg);">
+        <h2>專案與作品集</h2>
+        <div class="projects-grid">
+            <a class="project-card" href="#" target="_blank">
+                <div class="project-image" style="background-image: url('placeholder-code.jpg');"></div>
+                <div class="project-content">
+                    <h3>智慧交通模擬系統</h3>
+                    <p>利用 Python 建立城市交通模型，模擬車流並優化紅綠燈號誌，有效減少30%壅塞時間。</p>
+                </div>
+            </a>
+            <a class="project-card" href="#" target="_blank">
+                <div class="project-image" style="background-image: url('placeholder-diabolo.jpg');"></div>
+                <div class="project-content">
+                    <h3>全國扯鈴大賽優勝作品</h3>
+                    <p>結合扯鈴與聲光效果的表演，榮獲全國扯鈴大賽冠軍，展現跨領域的創意與技術。</p>
+                </div>
+            </a>
+            <a class="project-card" href="#" target="_blank">
+                <div class="project-image" style="background-image: url('placeholder-photoshop.jpg');"></div>
+                <div class="project-content">
+                    <h3>攝影集：城市的溫度</h3>
+                    <p>利用 Photoshop 後製，呈現一系列捕捉城市生活瞬間的攝影作品，突顯設計與觀察力。</p>
+                </div>
+            </a>
+        </div>
+        <p style="font-size: 18px; margin-top: 40px; color: var(--apple-gray);">*點擊作品卡片以了解更多詳細內容。</p>
+    </div>
+
+    <div class="section section-content">
         <h2>興趣</h2>
         <ul class="interests-list">
             <li>動畫品鑑</li>
@@ -193,11 +263,12 @@
             <li>Email: <a href="mailto:matcha20150203@gmail.com">matcha20150203@gmail.com</a></li>
             <li>GitHub: <a href="https://github.com/JonasFanZ" target="_blank">JonasFanZ</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/jonasfan/" target="_blank">Jonas Fan</a></li>
+            <li>所在地: 台灣 新北市</li>
         </ul>
     </div>
 
     <footer>
-        <p>台灣 新北市 | &copy; 2025 范子昊 (Jonas). All Rights Reserved.</p>
+        <p>&copy; 2025 范子昊 (Jonas). All Rights Reserved.</p>
     </footer>
 
 </body>
